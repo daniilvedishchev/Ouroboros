@@ -1,6 +1,6 @@
 # Ouroboros
 
-Peer-to-peer distributed database that runs in the browser. Each node stores its operation log locally in IndexedDB. Nodes sync through a minimal WebSocket relay — no central storage, no cloud dependency.
+Peer-to-peer semi-decentralized database that runs in the browser. Each node stores its operation log locally in IndexedDB. Nodes sync through a minimal WebSocket relay — no central storage, no cloud dependency.
 
 ```
 Browser A             Relay (Node.js)       Browser B

@@ -1,4 +1,4 @@
-# ZoethraDB
+# Ouroboros
 
 Peer-to-peer distributed database that runs in the browser. Each node stores its operation log locally in IndexedDB. Nodes sync through a minimal WebSocket relay — no central storage, no cloud dependency.
 
@@ -25,8 +25,8 @@ Browser A             Relay (Node.js)       Browser B
 ## Install
 
 ```bash
-git clone https://github.com/your-username/ZoethraDB
-cd ZoethraDB
+git clone https://github.com/your-username/Ouroboros
+cd Ouroboros
 npm install
 ```
 
@@ -45,7 +45,7 @@ npm run relay:signaling
 ### Start the relay programmatically
 
 ```js
-import { createRelayServer } from "zoethradb/relay";
+import { createRelayServer } from "Ouroboros/relay";
 
 const { wss, close } = createRelayServer(8080);
 ```
@@ -53,9 +53,9 @@ const { wss, close } = createRelayServer(8080);
 ### Connect a browser node
 
 ```js
-import { openDB }               from "zoethradb/storage";
-import { sync, shareOperation } from "zoethradb/sync";
-import { createIdentity }       from "zoethradb/identity";
+import { openDB }               from "Ouroboros/storage";
+import { sync, shareOperation } from "Ouroboros/sync";
+import { createIdentity }       from "Ouroboros/identity";
 
 const identity = await createIdentity();
 const db       = await openDB();
@@ -151,12 +151,12 @@ examples/
 ## Exports
 
 ```js
-import { createRelayServer }                                    from "zoethradb/relay";
-import { sync, shareOperation }                                 from "zoethradb/sync";
-import { createIdentity, signMessage, verifyMessage }           from "zoethradb/identity";
+import { createRelayServer }                                    from "Ouroboros/relay";
+import { sync, shareOperation }                                 from "Ouroboros/sync";
+import { createIdentity, signMessage, verifyMessage }           from "Ouroboros/identity";
 import { openDB, setData, getData, getLatestOp, getAllOps,
-         mergeOps, hasOp }                                      from "zoethradb/storage";
-import { makeMessage, MessageType }                             from "zoethradb/messages";
+         mergeOps, hasOp }                                      from "Ouroboros/storage";
+import { makeMessage, MessageType }                             from "Ouroboros/messages";
 ```
 
 ## Roadmap

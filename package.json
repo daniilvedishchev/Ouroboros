@@ -1,0 +1,31 @@
+{
+  "name": "zoethradb",
+  "version": "0.1.0",
+  "description": "Peer-to-peer distributed database with WebSocket relay and WebRTC transport",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./relay": "./src/relay/server.js",
+    "./sync": "./src/sync/sync.js",
+    "./identity": "./src/identity/identity.js",
+    "./storage": "./src/storage/indexedDB.js",
+    "./messages": "./src/messages/messages.js"
+  },
+  "scripts": {
+    "relay": "node src/relay/server.js",
+    "relay:signaling": "node src/relay/signaling.js",
+    "dev": "node src/relay/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  },
+  "keywords": ["p2p", "distributed", "database", "webrtc", "websocket", "indexeddb"],
+  "license": "MIT"
+}
